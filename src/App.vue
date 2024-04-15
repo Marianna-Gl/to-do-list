@@ -10,7 +10,7 @@ export default {
 
 <template>
   <main>
-    <todo-list />
+    <Todo-list />
   </main>
 </template>
 ./components/TodoList/TodoList.vue
