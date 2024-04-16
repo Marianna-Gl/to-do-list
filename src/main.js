@@ -1,8 +1,9 @@
 import './assets/main.css'
 import 'vuetify/styles'
 
-import { createApp } from 'vue' 555.5k (gzipped:178k)
-import { createVuetify } from 'vuetify' 33.1k (gzipped:12k)
+import { createApp } from 'vue'
+
+import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import App from './App.vue'
@@ -12,5 +13,6 @@ const vuetify = createVuetify({
   directives
 })
 
-
-create (App).use(vuetify).mount('#app')
+const app = createApp(App)
+app.use(vuetify)
+app.mount('#app')
