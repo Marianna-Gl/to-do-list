@@ -37,44 +37,4 @@
   </template>
   
   <script src="./taskModal.js"></script>
-   37 changes: 37 additions & 0 deletions37  
-  src/components/TaskModal/taskModal.js
-  Viewed
-  @@ -0,0 +1,37 @@
-  import Datepicker from '@vuepic/vue-datepicker'
-  import '@vuepic/vue-datepicker/dist/main.css'
-  
-  export default {
-    components: {
-      Datepicker
-    },
-    props: {
-      isOpen: {
-        type: Boolean,
-        required: true
-      }
-    },
-    data() {
-      return {
-        title: '',
-        description: '',
-        dueDate: ''
-      }
-    },
-    methods: {
-      onClose() {
-        this.$emit('close')
-      },
-      onSave() {
-        const newTask = {
-          title: this.title,
-          description: this.description,
-          date: this.dueDate
-        }
-        this.$emit('taskSave', newTask)
-      },
-      onTitleInput(event) {
-        this.title = event.target.value
-      }
-    }
-  }
+ 
